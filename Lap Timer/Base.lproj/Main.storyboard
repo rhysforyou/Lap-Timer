@@ -136,6 +136,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="toggleTimer:" destination="pN8-GX-8gL" eventType="touchUpInside" id="bie-8I-FIH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.11764705882352941" green="0.078431372549019607" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,6 +185,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="averageTimeLabel" destination="DdP-pI-C54" id="ZoD-Nk-Xxt"/>
+                        <outlet property="averageTimeProgressView" destination="KYv-bQ-Ydu" id="JJT-zu-RW4"/>
+                        <outlet property="bestTimeLabel" destination="U4q-t1-qla" id="2k3-2f-chC"/>
+                        <outlet property="bestTimeProgressView" destination="PDj-I8-VKU" id="UhM-qq-woi"/>
+                        <outlet property="currentTimeLabel" destination="nkQ-K9-Mkn" id="w10-KM-yMU"/>
+                        <outlet property="currentTimeProgressView" destination="JkX-t1-Msv" id="kLN-7p-v3V"/>
+                        <outlet property="stopWatchButton" destination="Q8h-Hj-1HX" id="iqk-Lr-pym"/>
+                        <outlet property="stopWatchLabel" destination="WxZ-9l-QCi" id="dJT-ZR-QKj"/>
+                        <outlet property="worstTimeLabel" destination="QIb-5k-Dgz" id="Hgk-sA-xdv"/>
+                        <outlet property="worstTimeProgressView" destination="oR5-qf-DlG" id="NdV-yu-Ffq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxg-Lw-9Rj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="otx-6h-zyU" userLabel="Exit" sceneMemberID="exit"/>
