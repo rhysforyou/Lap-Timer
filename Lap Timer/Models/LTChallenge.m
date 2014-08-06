@@ -20,6 +20,21 @@
 	return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	if (self = [super init]) {
+		_name = [aDecoder decodeObjectForKey:@"name"];
+		_times = [aDecoder decodeObjectForKey:@"times"];
+	}
+	return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+	[aCoder encodeObject:self.name forKey:@"name"];
+	[aCoder encodeObject:self.times forKey:@"times"];
+}
+
 - (void)addTime:(LTTime *)time
 {
 	[self.times addObject:time];

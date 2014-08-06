@@ -10,7 +10,7 @@
 
 @class LTChallenge;
 
-@interface LTModel : NSObject
+@interface LTModel : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSMutableArray *challenges;
 

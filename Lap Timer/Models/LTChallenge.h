@@ -10,7 +10,7 @@
 
 @class LTTime;
 
-@interface LTChallenge : NSObject
+@interface LTChallenge : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSMutableArray *times;
