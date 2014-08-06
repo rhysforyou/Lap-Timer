@@ -10,4 +10,18 @@
 
 @implementation LTChallenge
 
+- (instancetype)initWithName:(NSString *)name
+{
+	if (self = [super init]) {
+		_name = name;
+		_times = [[NSMutableArray alloc] init];
+	}
+	return self;
+}
+
+- (void)addTime:(LTTime *)time
+{
+	[self.times addObject:time];
+}
+
 @end

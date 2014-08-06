@@ -10,7 +10,7 @@
 
 @interface LTTime : NSObject
 
-@property (nonatomic) NSTimeInterval time;
+@property (nonatomic) NSTimeInterval duration;
 @property (nonatomic, strong) NSDate *dateRecorded;
 @property (nonatomic, strong) NSString *comment;
 

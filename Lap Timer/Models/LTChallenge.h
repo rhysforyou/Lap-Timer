@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class LTTime;
+
 @interface LTChallenge : NSObject
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSMutableArray *times;
+
+- (void)addTime:(LTTime *)time;
+
+- (instancetype)initWithName:(NSString *)name;
 
 @end

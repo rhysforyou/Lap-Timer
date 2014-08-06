@@ -7,6 +7,8 @@
 //
 
 #import "LTTimerViewController.h"
+#import "LTChallenge.h"
+#import "LTTime.h"
 
 typedef NS_ENUM(NSInteger, LTTimerState) {
 	LTTimerStateStopped,
@@ -46,7 +48,16 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 {
 	[super viewDidLoad];
 
+	self.challenge = [[LTChallenge alloc] initWithName:@"Test"];
+
 	self.state = LTTimerStateStopped;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+
+	self.navigationItem.title = self.challenge.name;
 }
 
 #pragma mark - Timer
@@ -111,10 +122,24 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 													   delegate:self
 											  cancelButtonTitle:@"Dismiss"
 											  otherButtonTitles:@"Save", nil];
+	alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
 	[alertView show];
 }
 
 // Allows us to unwind from a segue back to this view controller
 - (IBAction)unwindFromTimesView:(UIStoryboardSegue *)segue {}
+
+#pragma mark - Alert View Delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 1) { // Save
+		LTTime *time = [[LTTime alloc] init];
+		time.duration = self.currentTime;
+		time.dateRecorded = [NSDate date];
+		time.comment = [[alertView textFieldAtIndex:0] text];
+		[self.challenge addTime:time];
+	}
+}
 
 @end
