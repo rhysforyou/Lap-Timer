@@ -44,13 +44,6 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 
 #pragma mark - View Lifecycle
 
-- (void)viewDidLoad
-{
-	[super viewDidLoad];
-
-	self.challenge = [[LTChallenge alloc] initWithName:@"Test"];
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
