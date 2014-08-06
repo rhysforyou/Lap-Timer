@@ -11,7 +11,7 @@
 #import "LTChallenge.h"
 #import "LTTimerViewController.h"
 
-@interface LTChallengesViewController ()
+@interface LTChallengesViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -84,6 +84,33 @@
 		LTChallenge *challenge = [self.model challengeAtIndex:indexPath.row];
 		LTTimerViewController *timerVC = (LTTimerViewController *)segue.destinationViewController;
 		timerVC.challenge = challenge;
+	}
+}
+
+#pragma mark - UI Actions
+
+- (IBAction)createChallenge:(id)sender
+{
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Challenge"
+														message:@"Enter a name for your challenge"
+													   delegate:self
+											  cancelButtonTitle:@"Cancel"
+											  otherButtonTitles:@"Save", nil];
+	alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+	[alertView show];
+}
+
+#pragma mark - Alert View Delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 1) {
+		UITextField *textInput = [alertView textFieldAtIndex:0];
+		LTChallenge *challenge = [[LTChallenge alloc] initWithName:textInput.text];
+		[self.model addChallenge:challenge];
+		NSIndexPath *newRowIndexPath = [NSIndexPath indexPathForRow:[self.model numberOfChallenges]-1 inSection:0];
+		[self.tableView insertRowsAtIndexPaths:@[newRowIndexPath]
+							  withRowAnimation:UITableViewRowAnimationAutomatic];
 	}
 }
 

@@ -40,7 +40,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Challenges" id="jNC-D8-QfV">
-                        <barButtonItem key="rightBarButtonItem" title="New" id="Gpe-zt-Cr9"/>
+                        <barButtonItem key="rightBarButtonItem" title="New" id="Gpe-zt-Cr9">
+                            <connections>
+                                <action selector="createChallenge:" destination="Z4t-8n-BQw" id="GLE-Gx-DfO"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <segue destination="pN8-GX-8gL" kind="push" identifier="showTimer" id="ndZ-rf-5nU"/>
