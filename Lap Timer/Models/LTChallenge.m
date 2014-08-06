@@ -7,6 +7,7 @@
 //
 
 #import "LTChallenge.h"
+#import "LTTime.h"
 
 @implementation LTChallenge
 
@@ -22,6 +23,30 @@
 - (void)addTime:(LTTime *)time
 {
 	[self.times addObject:time];
+}
+
+- (NSInteger)numberOfTimes
+{
+	return [self.times count];
+}
+
+- (LTTime *)bestTime
+{
+	return [[self.times sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+		return ((LTTime *)obj1).duration > ((LTTime *)obj2).duration;
+	}] firstObject];
+}
+
+- (LTTime *)worstTime
+{
+	return [[self.times sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+		return ((LTTime *)obj1).duration < ((LTTime *)obj2).duration;
+	}] firstObject];
+}
+
+- (NSTimeInterval)averageTime
+{
+	return [[self.times valueForKeyPath:@"@avg.duration"] doubleValue];
 }
 
 @end

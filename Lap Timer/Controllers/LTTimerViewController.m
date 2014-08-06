@@ -49,13 +49,16 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 	[super viewDidLoad];
 
 	self.challenge = [[LTChallenge alloc] initWithName:@"Test"];
-
-	self.state = LTTimerStateStopped;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+
+	self.state = LTTimerStateStopped;
+	self.currentTime = 0.0;
+
+	[self refreshTimerDisplay];
 
 	self.navigationItem.title = self.challenge.name;
 }
@@ -71,6 +74,37 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 - (void)refreshTimerDisplay
 {
 	self.stopWatchLabel.text = [self.timeFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:self.currentTime]];
+
+	NSTimeInterval maxTime = self.currentTime;
+
+	if ([self.challenge numberOfTimes] > 0) {
+		LTTime *bestTime = [self.challenge bestTime];
+		LTTime *worstTime = [self.challenge worstTime];
+		NSTimeInterval averageDuration = [self.challenge averageTime];
+
+		if (worstTime.duration > maxTime) maxTime = worstTime.duration;
+
+		self.bestTimeLabel.text = [self formatTimeInterval:bestTime.duration];
+		self.bestTimeProgressView.progress = bestTime.duration / maxTime;
+
+		self.worstTimeLabel.text = [self formatTimeInterval:worstTime.duration];
+		self.worstTimeProgressView.progress = worstTime.duration / maxTime;
+
+		self.averageTimeLabel.text = [self formatTimeInterval:averageDuration];
+		self.averageTimeProgressView.progress = averageDuration / maxTime;
+	} else {
+		self.bestTimeLabel.text = @"00:00:0";
+		self.bestTimeProgressView.progress = 0.0;
+
+		self.worstTimeLabel.text = @"00:00:0";
+		self.worstTimeProgressView.progress = 0.0;
+
+		self.averageTimeLabel.text = @"00:00:0";
+		self.averageTimeProgressView.progress = 0.0;
+	}
+
+	self.currentTimeLabel.text = [self formatTimeInterval:self.currentTime];
+	self.currentTimeProgressView.progress = self.currentTime / maxTime;
 }
 
 #pragma mark - Accessors
@@ -107,6 +141,7 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 			break;
 		case LTTimerStateFinished: // Clear current time
 			self.currentTime = 0.0;
+			[self refreshTimerDisplay];
 			self.state = LTTimerStateStopped;
 			break;
 
@@ -139,7 +174,17 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 		time.dateRecorded = [NSDate date];
 		time.comment = [[alertView textFieldAtIndex:0] text];
 		[self.challenge addTime:time];
+
+		[self refreshTimerDisplay];
 	}
+}
+
+#pragma mark - Utilities
+
+- (NSString *)formatTimeInterval:(NSTimeInterval)interval
+{
+	NSDate *time = [NSDate dateWithTimeIntervalSince1970:interval];
+	return [self.timeFormatter stringFromDate:time];
 }
 
 @end

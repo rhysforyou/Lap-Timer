@@ -15,8 +15,13 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSMutableArray *times;
 
+- (instancetype)initWithName:(NSString *)name;
+
 - (void)addTime:(LTTime *)time;
 
-- (instancetype)initWithName:(NSString *)name;
+- (NSInteger)numberOfTimes;
+- (LTTime *)bestTime;
+- (LTTime *)worstTime;
+- (NSTimeInterval)averageTime;
 
 @end
