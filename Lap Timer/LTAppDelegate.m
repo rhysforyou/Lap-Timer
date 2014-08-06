@@ -7,12 +7,26 @@
 //
 
 #import "LTAppDelegate.h"
+#import "LTModel.h"
+#import "LTChallenge.h"
+#import "LTChallengesViewController.h"
 
 @implementation LTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 	[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:69.0/255.0 green: 48.0/255.0 blue: 67.0/255.0 alpha: 1.0]];
+
+	LTModel *lapTimerModel = [[LTModel alloc] init];
+	[lapTimerModel addChallenge:[[LTChallenge alloc] initWithName:@"Clap 20 Times"]];
+	[lapTimerModel addChallenge:[[LTChallenge alloc] initWithName:@"Say the Alphabet"]];
+	[lapTimerModel addChallenge:[[LTChallenge alloc] initWithName:@"100 Metre Sprint"]];
+	[lapTimerModel addChallenge:[[LTChallenge alloc] initWithName:@"Read the CSCI342 Spec"]];
+
+	UINavigationController *navVC = (UINavigationController *)[self.window rootViewController];
+	LTChallengesViewController *challengesVC = (LTChallengesViewController *)[navVC topViewController];
+
+	challengesVC.model = lapTimerModel;
 
     return YES;
 }

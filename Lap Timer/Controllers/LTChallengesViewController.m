@@ -7,6 +7,8 @@
 //
 
 #import "LTChallengesViewController.h"
+#import "LTModel.h"
+#import "LTChallenge.h"
 
 @interface LTChallengesViewController ()
 
@@ -44,28 +46,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.model numberOfChallenges];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"challengeCell" forIndexPath:indexPath];
+	LTChallenge *challenge = [self.model challengeAtIndex:indexPath.row];
+
+	cell.textLabel.text = challenge.name;
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
