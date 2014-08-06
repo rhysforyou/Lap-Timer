@@ -132,17 +132,20 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 														userInfo:nil
 														 repeats:YES];
 			self.state = LTTimerStateRunning;
+			[self.stopWatchButton setTitle:@"Stop" forState:UIControlStateNormal];
 			break;
 		case LTTimerStateRunning: // Stop the timer
 			[self.timer invalidate];
 			self.timer = nil;
 			self.state = LTTimerStateFinished;
 			[self saveCurrentTime];
+			[self.stopWatchButton setTitle:@"Clear" forState:UIControlStateNormal];
 			break;
 		case LTTimerStateFinished: // Clear current time
 			self.currentTime = 0.0;
 			[self refreshTimerDisplay];
 			self.state = LTTimerStateStopped;
+			[self.stopWatchButton setTitle:@"Start" forState:UIControlStateNormal];
 			break;
 
 		default:
