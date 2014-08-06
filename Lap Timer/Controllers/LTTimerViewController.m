@@ -190,7 +190,7 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 {
 	if ([segue.identifier isEqualToString:@"showTimes"]) {
 		UINavigationController *navVC = segue.destinationViewController;
-		LTTimesViewController *timesVC = navVC.topViewController;
+		LTTimesViewController *timesVC = (LTTimesViewController *)navVC.topViewController;
 		timesVC.challenge = self.challenge;
 
 	}
