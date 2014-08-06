@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LTTime : NSObject
+@interface LTTime : NSObject <NSCoding>
 
 @property (nonatomic) NSTimeInterval duration;
 @property (nonatomic, strong) NSDate *dateRecorded;

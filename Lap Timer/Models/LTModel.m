@@ -14,9 +14,21 @@
 {
 	if (self = [super init]) {
 		_challenges = [[NSMutableArray alloc] init];
-		
 	}
 	return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	if (self = [super init]) {
+		_challenges = [aDecoder decodeObjectForKey:@"challenges"];
+	}
+	return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+	[aCoder encodeObject:self.challenges forKey:@"challenges"];
 }
 
 - (void)addChallenge:(LTChallenge *)challenge
