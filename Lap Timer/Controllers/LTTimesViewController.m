@@ -9,11 +9,12 @@
 #import "LTTimesViewController.h"
 #import "LTChallenge.h"
 #import "LTTime.h"
+#import "LTTimeTableViewCell.h"
 
 @interface LTTimesViewController ()
 
-
 @property (nonatomic, strong) NSDateFormatter *timeFormatter;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end
 
@@ -28,6 +29,16 @@
 		_timeFormatter.dateFormat = @"mm:ss:S";
 	}
 	return _timeFormatter;
+}
+
+- (NSDateFormatter *)dateFormatter
+{
+	if (!_dateFormatter) {
+		_dateFormatter = [[NSDateFormatter alloc] init];
+		_dateFormatter.dateStyle = NSDateFormatterShortStyle;
+		_dateFormatter.timeStyle = NSDateFormatterNoStyle;
+	}
+	return _dateFormatter;
 }
 
 #pragma mark - Table view data source
@@ -46,11 +57,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"timeCell" forIndexPath:indexPath];
+    LTTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"timeCell" forIndexPath:indexPath];
 	LTTime *time = [self.challenge timeAtIndex:indexPath.row];
 
-	cell.textLabel.text = time.comment;
-	cell.detailTextLabel.text = [self formatTimeInterval:time.duration];
+	cell.commentLabel.text = time.comment;
+	cell.timeLabel.text = [self formatTimeInterval:time.duration];
+	cell.dateLabel.text = [self.dateFormatter stringFromDate:time.dateRecorded];
 
     return cell;
 }

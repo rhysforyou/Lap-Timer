@@ -27,6 +27,7 @@
 		575CA97D1991DD010021A504 /* LTChallengesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA97C1991DD010021A504 /* LTChallengesViewController.m */; };
 		575CA9801991DD0A0021A504 /* LTTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA97F1991DD0A0021A504 /* LTTimerViewController.m */; };
 		575CA9831991DD1B0021A504 /* LTTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9821991DD1B0021A504 /* LTTimesViewController.m */; };
+		57E4B0AB199214E5007D7825 /* LTTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E4B0AA199214E5007D7825 /* LTTimeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		575CA97F1991DD0A0021A504 /* LTTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTimerViewController.m; sourceTree = "<group>"; };
 		575CA9811991DD1B0021A504 /* LTTimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTimesViewController.h; sourceTree = "<group>"; };
 		575CA9821991DD1B0021A504 /* LTTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTimesViewController.m; sourceTree = "<group>"; };
+		57E4B0A9199214E5007D7825 /* LTTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTimeTableViewCell.h; sourceTree = "<group>"; };
+		57E4B0AA199214E5007D7825 /* LTTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTimeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,7 @@
 		575CA93B1991D9DE0021A504 /* Lap Timer */ = {
 			isa = PBXGroup;
 			children = (
+				57E4B0A8199214C2007D7825 /* Views */,
 				575CA96A1991DA5D0021A504 /* Models */,
 				575CA97A1991DCE70021A504 /* Controllers */,
 				575CA9441991D9DE0021A504 /* LTAppDelegate.h */,
@@ -196,6 +200,15 @@
 				575CA9821991DD1B0021A504 /* LTTimesViewController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		57E4B0A8199214C2007D7825 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57E4B0A9199214E5007D7825 /* LTTimeTableViewCell.h */,
+				57E4B0AA199214E5007D7825 /* LTTimeTableViewCell.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +313,7 @@
 				575CA9761991DAC30021A504 /* LTChallenge.m in Sources */,
 				575CA9801991DD0A0021A504 /* LTTimerViewController.m in Sources */,
 				575CA97D1991DD010021A504 /* LTChallengesViewController.m in Sources */,
+				57E4B0AB199214E5007D7825 /* LTTimeTableViewCell.m in Sources */,
 				575CA9831991DD1B0021A504 /* LTTimesViewController.m in Sources */,
 				575CA9731991DAB80021A504 /* LTModel.m in Sources */,
 				575CA9421991D9DE0021A504 /* main.m in Sources */,
@@ -509,6 +523,7 @@
 				575CA9661991D9DE0021A504 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		575CA9671991D9DE0021A504 /* Build configuration list for PBXNativeTarget "Lap TimerTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +532,7 @@
 				575CA9691991D9DE0021A504 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
