@@ -25,6 +25,11 @@
 	[self.times addObject:time];
 }
 
+- (LTTime *)timeAtIndex:(NSInteger)index
+{
+	return self.times[index];
+}
+
 - (NSInteger)numberOfTimes
 {
 	return [self.times count];

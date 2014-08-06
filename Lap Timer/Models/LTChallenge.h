@@ -18,8 +18,9 @@
 - (instancetype)initWithName:(NSString *)name;
 
 - (void)addTime:(LTTime *)time;
-
+- (LTTime *)timeAtIndex:(NSInteger)index;
 - (NSInteger)numberOfTimes;
+
 - (LTTime *)bestTime;
 - (LTTime *)worstTime;
 - (NSTimeInterval)averageTime;

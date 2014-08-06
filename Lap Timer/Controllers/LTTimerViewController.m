@@ -7,6 +7,7 @@
 //
 
 #import "LTTimerViewController.h"
+#import "LTTimesViewController.h"
 #import "LTChallenge.h"
 #import "LTTime.h"
 
@@ -181,6 +182,18 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 {
 	NSDate *time = [NSDate dateWithTimeIntervalSince1970:interval];
 	return [self.timeFormatter stringFromDate:time];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:@"showTimes"]) {
+		UINavigationController *navVC = segue.destinationViewController;
+		LTTimesViewController *timesVC = navVC.topViewController;
+		timesVC.challenge = self.challenge;
+
+	}
 }
 
 @end

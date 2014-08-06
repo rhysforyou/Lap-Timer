@@ -67,73 +67,73 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxZ-9l-QCi">
-                                <rect key="frame" x="40" y="60" width="241" height="83"/>
+                                <rect key="frame" x="40" y="104" width="241" height="83"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="72"/>
                                 <color key="textColor" red="0.78823529411764703" green="0.69803921568627447" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6i-1V-TqT">
-                                <rect key="frame" x="20" y="183" width="78" height="21"/>
+                                <rect key="frame" x="20" y="227" width="78" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529411764703" green="0.69803921568627447" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-t1-qla">
-                                <rect key="frame" x="242" y="183" width="58" height="21"/>
+                                <rect key="frame" x="242" y="227" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.78431372549019607" green="0.69803921568627447" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PDj-I8-VKU">
-                                <rect key="frame" x="0.0" y="209" width="320" height="3"/>
+                                <rect key="frame" x="0.0" y="253" width="320" height="3"/>
                                 <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worst Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlq-o9-pOM">
-                                <rect key="frame" x="20" y="226" width="87" height="21"/>
+                                <rect key="frame" x="20" y="270" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIb-5k-Dgz">
-                                <rect key="frame" x="242" y="226" width="58" height="21"/>
+                                <rect key="frame" x="242" y="270" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oR5-qf-DlG">
-                                <rect key="frame" x="0.0" y="252" width="320" height="3"/>
+                                <rect key="frame" x="0.0" y="296" width="320" height="3"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VG-UM-uon">
-                                <rect key="frame" x="20" y="269" width="105" height="21"/>
+                                <rect key="frame" x="20" y="313" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdP-pI-C54">
-                                <rect key="frame" x="242" y="269" width="58" height="21"/>
+                                <rect key="frame" x="242" y="313" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KYv-bQ-Ydu">
-                                <rect key="frame" x="0.0" y="295" width="320" height="3"/>
+                                <rect key="frame" x="0.0" y="339" width="320" height="3"/>
                                 <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKm-ZH-b4U">
-                                <rect key="frame" x="20" y="312" width="100" height="21"/>
+                                <rect key="frame" x="20" y="356" width="100" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-K9-Mkn">
-                                <rect key="frame" x="242" y="312" width="58" height="21"/>
+                                <rect key="frame" x="242" y="356" width="58" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JkX-t1-Msv">
-                                <rect key="frame" x="0.0" y="338" width="320" height="3"/>
+                                <rect key="frame" x="0.0" y="382" width="320" height="3"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8h-Hj-1HX">
                                 <rect key="frame" x="20" y="507" width="280" height="41"/>
@@ -186,7 +186,7 @@
                     <navigationItem key="navigationItem" title="Challenge" id="KzF-qJ-WPE">
                         <barButtonItem key="rightBarButtonItem" title="Times" id="PLu-DN-s2v">
                             <connections>
-                                <segue destination="W0J-dp-pjR" kind="modal" id="EjG-Dp-zqB"/>
+                                <segue destination="W0J-dp-pjR" kind="modal" identifier="showTimes" id="EjG-Dp-zqB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -228,27 +228,46 @@
         <scene sceneID="xmL-zB-sdy">
             <objects>
                 <tableViewController id="Opb-Xr-8kp" customClass="LTTimesViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XcV-fB-bYd">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="XcV-fB-bYd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.054901960784313725" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.36470588235294116" green="0.30588235294117649" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Saj-5d-Ibp">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timeCell" textLabel="SYG-wN-bkl" detailTextLabel="TQQ-QY-SNa" style="IBUITableViewCellStyleValue1" id="Saj-5d-Ibp">
+                                <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Saj-5d-Ibp" id="nyO-hQ-nId">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SYG-wN-bkl">
+                                            <rect key="frame" x="15" y="11" width="33" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.78431372549019607" green="0.69803921568627447" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TQQ-QY-SNa">
+                                            <rect key="frame" x="261" y="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.78431372549019607" green="0.69803921568627447" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.13725490196078433" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Opb-Xr-8kp" id="VsC-YA-w7D"/>
                             <outlet property="delegate" destination="Opb-Xr-8kp" id="6CZ-pM-tjI"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Times" id="CIT-u9-EcM">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="v6R-Sf-Jlo">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="v6R-Sf-Jlo">
                             <connections>
                                 <segue destination="otx-6h-zyU" kind="unwind" unwindAction="unwindFromTimesView:" id="zM6-aF-b2i"/>
                             </connections>
@@ -264,7 +283,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W0J-dp-pjR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="at9-XT-7PV">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="at9-XT-7PV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
