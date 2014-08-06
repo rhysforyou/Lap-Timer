@@ -46,7 +46,134 @@
                     <view key="view" contentMode="scaleToFill" id="1kK-pW-Plv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxZ-9l-QCi">
+                                <rect key="frame" x="40" y="60" width="241" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="72"/>
+                                <color key="textColor" red="0.78823529411764703" green="0.69803921568627447" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6i-1V-TqT">
+                                <rect key="frame" x="20" y="183" width="78" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529411764703" green="0.69803921568627447" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4q-t1-qla">
+                                <rect key="frame" x="242" y="183" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PDj-I8-VKU">
+                                <rect key="frame" x="0.0" y="209" width="320" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worst Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlq-o9-pOM">
+                                <rect key="frame" x="20" y="226" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIb-5k-Dgz">
+                                <rect key="frame" x="242" y="226" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oR5-qf-DlG">
+                                <rect key="frame" x="0.0" y="252" width="320" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VG-UM-uon">
+                                <rect key="frame" x="20" y="269" width="105" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdP-pI-C54">
+                                <rect key="frame" x="242" y="269" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KYv-bQ-Ydu">
+                                <rect key="frame" x="0.0" y="295" width="320" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKm-ZH-b4U">
+                                <rect key="frame" x="20" y="312" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkQ-K9-Mkn">
+                                <rect key="frame" x="242" y="312" width="58" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.78823529410000004" green="0.69803921570000005" blue="0.77647058820000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JkX-t1-Msv">
+                                <rect key="frame" x="0.0" y="338" width="320" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8h-Hj-1HX">
+                                <rect key="frame" x="20" y="507" width="280" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11764705882352941" green="0.078431372549019607" blue="0.11372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="JkX-t1-Msv" firstAttribute="top" secondItem="vKm-ZH-b4U" secondAttribute="bottom" constant="5" id="6Kj-qM-TvF"/>
+                            <constraint firstItem="JkX-t1-Msv" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" id="6PR-ph-oBy"/>
+                            <constraint firstAttribute="trailing" secondItem="oR5-qf-DlG" secondAttribute="trailing" id="6vu-du-xFr"/>
+                            <constraint firstItem="tlq-o9-pOM" firstAttribute="baseline" secondItem="QIb-5k-Dgz" secondAttribute="baseline" id="98C-m2-FxP"/>
+                            <constraint firstAttribute="trailing" secondItem="PDj-I8-VKU" secondAttribute="trailing" id="9gx-ZE-Tl2"/>
+                            <constraint firstAttribute="trailing" secondItem="DdP-pI-C54" secondAttribute="trailing" constant="20" id="Bju-X6-HHx"/>
+                            <constraint firstItem="PDj-I8-VKU" firstAttribute="top" secondItem="a6i-1V-TqT" secondAttribute="bottom" constant="5" id="CcP-Pq-hr4"/>
+                            <constraint firstAttribute="trailing" secondItem="QIb-5k-Dgz" secondAttribute="trailing" constant="20" id="EhY-TI-s9F"/>
+                            <constraint firstItem="a6i-1V-TqT" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" constant="20" id="Fqc-fM-cO7"/>
+                            <constraint firstItem="tlq-o9-pOM" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" constant="20" id="HnA-op-iWY"/>
+                            <constraint firstAttribute="trailing" secondItem="KYv-bQ-Ydu" secondAttribute="trailing" id="Lpr-hW-Erg"/>
+                            <constraint firstItem="1VG-UM-uon" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" constant="20" id="NI4-Np-Q7p"/>
+                            <constraint firstItem="WxZ-9l-QCi" firstAttribute="top" secondItem="AcA-3i-jcg" secondAttribute="bottom" constant="40" id="OUw-UT-Y1u"/>
+                            <constraint firstAttribute="trailing" secondItem="Q8h-Hj-1HX" secondAttribute="trailing" constant="20" id="QuY-Yy-uBT"/>
+                            <constraint firstItem="a6i-1V-TqT" firstAttribute="baseline" secondItem="U4q-t1-qla" secondAttribute="baseline" id="WZL-WR-Rvx"/>
+                            <constraint firstItem="KYv-bQ-Ydu" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" id="eex-Qg-hM4"/>
+                            <constraint firstItem="1VG-UM-uon" firstAttribute="baseline" secondItem="DdP-pI-C54" secondAttribute="baseline" id="ghc-rK-yQz"/>
+                            <constraint firstItem="vKm-ZH-b4U" firstAttribute="baseline" secondItem="nkQ-K9-Mkn" secondAttribute="baseline" id="gu7-6F-OYx"/>
+                            <constraint firstAttribute="trailing" secondItem="nkQ-K9-Mkn" secondAttribute="trailing" constant="20" id="hbZ-Wu-VLY"/>
+                            <constraint firstItem="oR5-qf-DlG" firstAttribute="top" secondItem="tlq-o9-pOM" secondAttribute="bottom" constant="5" id="iTa-Oi-v5v"/>
+                            <constraint firstItem="1VG-UM-uon" firstAttribute="top" secondItem="oR5-qf-DlG" secondAttribute="bottom" constant="15" id="j9a-Wi-Cru"/>
+                            <constraint firstAttribute="centerX" secondItem="WxZ-9l-QCi" secondAttribute="centerX" id="jJq-2v-4gO"/>
+                            <constraint firstItem="tlq-o9-pOM" firstAttribute="top" secondItem="PDj-I8-VKU" secondAttribute="bottom" constant="15" id="kCJ-nU-bgW"/>
+                            <constraint firstAttribute="trailing" secondItem="JkX-t1-Msv" secondAttribute="trailing" id="kEs-ep-2w2"/>
+                            <constraint firstItem="Q8h-Hj-1HX" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" constant="20" id="lnh-Mf-gWB"/>
+                            <constraint firstItem="KYv-bQ-Ydu" firstAttribute="top" secondItem="1VG-UM-uon" secondAttribute="bottom" constant="5" id="n3p-bl-nrQ"/>
+                            <constraint firstItem="7Cs-S3-b2L" firstAttribute="top" secondItem="Q8h-Hj-1HX" secondAttribute="bottom" constant="20" id="opT-8M-FEk"/>
+                            <constraint firstItem="oR5-qf-DlG" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" id="pa9-vz-PrQ"/>
+                            <constraint firstItem="a6i-1V-TqT" firstAttribute="top" secondItem="WxZ-9l-QCi" secondAttribute="bottom" constant="40" id="pzv-aX-FUP"/>
+                            <constraint firstItem="vKm-ZH-b4U" firstAttribute="top" secondItem="KYv-bQ-Ydu" secondAttribute="bottom" constant="15" id="q01-Ul-9Uk"/>
+                            <constraint firstItem="PDj-I8-VKU" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" id="rUE-cM-8MZ"/>
+                            <constraint firstAttribute="trailing" secondItem="U4q-t1-qla" secondAttribute="trailing" constant="20" id="riC-16-Fa8"/>
+                            <constraint firstItem="vKm-ZH-b4U" firstAttribute="leading" secondItem="1kK-pW-Plv" secondAttribute="leading" constant="20" id="u6p-gO-YGk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Challenge" id="KzF-qJ-WPE">
                         <barButtonItem key="rightBarButtonItem" title="Times" id="PLu-DN-s2v">
