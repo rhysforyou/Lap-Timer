@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LTChallenge;
+
 @interface LTTimesViewController : UITableViewController
+
+@property (nonatomic, strong) LTChallenge *challenge;
 
 @end

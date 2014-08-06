@@ -7,8 +7,11 @@
 //
 
 #import "LTChallengesViewController.h"
+#import "LTModel.h"
+#import "LTChallenge.h"
+#import "LTTimerViewController.h"
 
-@interface LTChallengesViewController ()
+@interface LTChallengesViewController () <UIAlertViewDelegate>
 
 @end
 
@@ -44,76 +47,71 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.model numberOfChallenges];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"challengeCell" forIndexPath:indexPath];
+	LTChallenge *challenge = [self.model challengeAtIndex:indexPath.row];
+
+	cell.textLabel.text = challenge.name;
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - Table View Delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+	[self performSegueWithIdentifier:@"showTimer" sender:self];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showTimer"]) {
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		LTChallenge *challenge = [self.model challengeAtIndex:indexPath.row];
+		LTTimerViewController *timerVC = (LTTimerViewController *)segue.destinationViewController;
+		timerVC.challenge = challenge;
+	}
 }
-*/
+
+#pragma mark - UI Actions
+
+- (IBAction)createChallenge:(id)sender
+{
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"New Challenge"
+														message:@"Enter a name for your challenge"
+													   delegate:self
+											  cancelButtonTitle:@"Cancel"
+											  otherButtonTitles:@"Save", nil];
+	alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
+	[alertView show];
+}
+
+#pragma mark - Alert View Delegate
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 1) {
+		UITextField *textInput = [alertView textFieldAtIndex:0];
+		LTChallenge *challenge = [[LTChallenge alloc] initWithName:textInput.text];
+		[self.model addChallenge:challenge];
+		NSIndexPath *newRowIndexPath = [NSIndexPath indexPathForRow:[self.model numberOfChallenges]-1 inSection:0];
+		[self.tableView insertRowsAtIndexPaths:@[newRowIndexPath]
+							  withRowAnimation:UITableViewRowAnimationAutomatic];
+	}
+}
 
 @end

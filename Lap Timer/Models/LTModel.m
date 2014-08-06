@@ -10,6 +10,15 @@
 
 @implementation LTModel
 
+- (id)init
+{
+	if (self = [super init]) {
+		_challenges = [[NSMutableArray alloc] init];
+		
+	}
+	return self;
+}
+
 - (void)addChallenge:(LTChallenge *)challenge
 {
 	[self.challenges addObject:challenge];

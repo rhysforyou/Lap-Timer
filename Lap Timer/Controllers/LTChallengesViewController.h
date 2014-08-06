@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class LTModel;
+
 @interface LTChallengesViewController : UITableViewController
+
+@property (nonatomic, strong) LTModel *model;
 
 @end
