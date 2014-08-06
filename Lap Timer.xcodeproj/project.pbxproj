@@ -21,6 +21,12 @@
 		575CA9571991D9DE0021A504 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575CA9391991D9DE0021A504 /* UIKit.framework */; };
 		575CA95F1991D9DE0021A504 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 575CA95D1991D9DE0021A504 /* InfoPlist.strings */; };
 		575CA9611991D9DE0021A504 /* Lap_TimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9601991D9DE0021A504 /* Lap_TimerTests.m */; };
+		575CA9731991DAB80021A504 /* LTModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9721991DAB80021A504 /* LTModel.m */; };
+		575CA9761991DAC30021A504 /* LTChallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9751991DAC30021A504 /* LTChallenge.m */; };
+		575CA9791991DACB0021A504 /* LTTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9781991DACB0021A504 /* LTTime.m */; };
+		575CA97D1991DD010021A504 /* LTChallengesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA97C1991DD010021A504 /* LTChallengesViewController.m */; };
+		575CA9801991DD0A0021A504 /* LTTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA97F1991DD0A0021A504 /* LTTimerViewController.m */; };
+		575CA9831991DD1B0021A504 /* LTTimesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9821991DD1B0021A504 /* LTTimesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,18 @@
 		575CA95C1991D9DE0021A504 /* Lap TimerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lap TimerTests-Info.plist"; sourceTree = "<group>"; };
 		575CA95E1991D9DE0021A504 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		575CA9601991D9DE0021A504 /* Lap_TimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lap_TimerTests.m; sourceTree = "<group>"; };
+		575CA9711991DAB80021A504 /* LTModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTModel.h; sourceTree = "<group>"; };
+		575CA9721991DAB80021A504 /* LTModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTModel.m; sourceTree = "<group>"; };
+		575CA9741991DAC30021A504 /* LTChallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTChallenge.h; sourceTree = "<group>"; };
+		575CA9751991DAC30021A504 /* LTChallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTChallenge.m; sourceTree = "<group>"; };
+		575CA9771991DACB0021A504 /* LTTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTime.h; sourceTree = "<group>"; };
+		575CA9781991DACB0021A504 /* LTTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTime.m; sourceTree = "<group>"; };
+		575CA97B1991DD010021A504 /* LTChallengesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTChallengesViewController.h; sourceTree = "<group>"; };
+		575CA97C1991DD010021A504 /* LTChallengesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTChallengesViewController.m; sourceTree = "<group>"; };
+		575CA97E1991DD0A0021A504 /* LTTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTimerViewController.h; sourceTree = "<group>"; };
+		575CA97F1991DD0A0021A504 /* LTTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTimerViewController.m; sourceTree = "<group>"; };
+		575CA9811991DD1B0021A504 /* LTTimesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTimesViewController.h; sourceTree = "<group>"; };
+		575CA9821991DD1B0021A504 /* LTTimesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTimesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +130,8 @@
 		575CA93B1991D9DE0021A504 /* Lap Timer */ = {
 			isa = PBXGroup;
 			children = (
+				575CA96A1991DA5D0021A504 /* Models */,
+				575CA97A1991DCE70021A504 /* Controllers */,
 				575CA9441991D9DE0021A504 /* LTAppDelegate.h */,
 				575CA9451991D9DE0021A504 /* LTAppDelegate.m */,
 				575CA9471991D9DE0021A504 /* Main.storyboard */,
@@ -150,6 +170,32 @@
 				575CA95D1991D9DE0021A504 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		575CA96A1991DA5D0021A504 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				575CA9711991DAB80021A504 /* LTModel.h */,
+				575CA9721991DAB80021A504 /* LTModel.m */,
+				575CA9741991DAC30021A504 /* LTChallenge.h */,
+				575CA9751991DAC30021A504 /* LTChallenge.m */,
+				575CA9771991DACB0021A504 /* LTTime.h */,
+				575CA9781991DACB0021A504 /* LTTime.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		575CA97A1991DCE70021A504 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				575CA97B1991DD010021A504 /* LTChallengesViewController.h */,
+				575CA97C1991DD010021A504 /* LTChallengesViewController.m */,
+				575CA97E1991DD0A0021A504 /* LTTimerViewController.h */,
+				575CA97F1991DD0A0021A504 /* LTTimerViewController.m */,
+				575CA9811991DD1B0021A504 /* LTTimesViewController.h */,
+				575CA9821991DD1B0021A504 /* LTTimesViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,7 +297,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				575CA9461991D9DE0021A504 /* LTAppDelegate.m in Sources */,
+				575CA9761991DAC30021A504 /* LTChallenge.m in Sources */,
+				575CA9801991DD0A0021A504 /* LTTimerViewController.m in Sources */,
+				575CA97D1991DD010021A504 /* LTChallengesViewController.m in Sources */,
+				575CA9831991DD1B0021A504 /* LTTimesViewController.m in Sources */,
+				575CA9731991DAB80021A504 /* LTModel.m in Sources */,
 				575CA9421991D9DE0021A504 /* main.m in Sources */,
+				575CA9791991DACB0021A504 /* LTTime.m in Sources */,
 				575CA94C1991D9DE0021A504 /* LTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
