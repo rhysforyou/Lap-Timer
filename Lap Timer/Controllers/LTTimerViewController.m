@@ -19,10 +19,19 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 
 @interface LTTimerViewController () <UIAlertViewDelegate>
 
+/// Used to update the stopwatch
 @property (nonatomic, strong) NSTimer *timer;
+
+/// Whether the timer is stopped, running, or finished
 @property (nonatomic) LTTimerState state;
+
+/// The amount of time elapsed on the current timer
 @property (nonatomic) NSTimeInterval currentTime;
+
+/// The moment when the current timer was started
 @property (nonatomic, strong) NSDate *timerStartDate;
+
+/// Used to format time intervals in the UI
 @property (nonatomic, strong) NSDateFormatter *timeFormatter;
 
 // User Interface
@@ -49,9 +58,9 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 {
 	[super viewWillAppear:animated];
 
+	// Reset the timer and refresh the UI
 	self.state = LTTimerStateStopped;
 	self.currentTime = 0.0;
-
 	[self refreshTimerDisplay];
 
 	self.navigationItem.title = self.challenge.name;
@@ -59,12 +68,20 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 
 #pragma mark - Timer
 
+/** Method called on timer ticks
+ 
+ @param timer the timer that called this method
+ */
 - (void)updateTimer:(NSTimer *)timer
 {
 	self.currentTime = [[NSDate date] timeIntervalSinceDate:self.timerStartDate];
 	[self refreshTimerDisplay];
 }
 
+/** 
+ Refresh the various timer displays based on the values of the current timer
+ and history array of the current challenge.
+ */
 - (void)refreshTimerDisplay
 {
 	self.stopWatchLabel.text = [self.timeFormatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:self.currentTime]];
@@ -128,6 +145,12 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 
 #pragma mark - UI Actions
 
+/**
+ *  Toggle the timer between its three possible states. From stopped, to 
+ *  running, to finished, and then back to stopped.
+ *
+ *  @param sender the object which sent this message
+ */
 - (IBAction)toggleTimer:(id)sender
 {
 	switch (self.state) {
@@ -161,6 +184,10 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 	}
 }
 
+/**
+ *  Present the user with a modal asking them whether to save the current time.
+ *  Actually saving the current time is handled by alert view delegate methods.
+ */
 - (void)saveCurrentTime
 {
 	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Save Time"
@@ -192,6 +219,13 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 
 #pragma mark - Utilities
 
+/**
+ *  Turn a time interval into a formatted string
+ *
+ *  @param interval the time interval to format
+ *
+ *  @return a string representing the elapsed time since the epoch
+ */
 - (NSString *)formatTimeInterval:(NSTimeInterval)interval
 {
 	NSDate *time = [NSDate dateWithTimeIntervalSince1970:interval];

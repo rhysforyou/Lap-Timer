@@ -10,12 +10,32 @@
 
 @class LTChallenge;
 
+/**
+ *  Represents a collection of `LTChallenge` objects
+ */
 @interface LTModel : NSObject <NSCoding>
 
-@property (nonatomic, strong) NSMutableArray *challenges;
-
+/**
+ *  Add a challenge to the model
+ *
+ *  @param challenge the challenge to add
+ */
 - (void)addChallenge:(LTChallenge *)challenge;
+
+/**
+ *  Get the challenge at a given index
+ *
+ *  @param index the index of the challenge
+ *
+ *  @return the challenge at that index
+ */
 - (LTChallenge *)challengeAtIndex:(NSInteger)index;
+
+/**
+ *  Get the number of challenges stored in this model
+ *
+ *  @return the number of challenges
+ */
 - (NSInteger)numberOfChallenges;
 
 @end

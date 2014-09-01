@@ -10,8 +10,12 @@
 
 @class LTModel;
 
+/**
+ *  Displays a list of challenges
+ */
 @interface LTChallengesViewController : UITableViewController
 
+/** The model to get the list of challenges from */
 @property (nonatomic, strong) LTModel *model;
 
 @end
