@@ -78,10 +78,24 @@ typedef NS_ENUM(NSInteger, LTTimerState) {
 
 		if (worstTime.duration > maxTime) maxTime = worstTime.duration;
 
-		self.bestTimeLabel.text = [self formatTimeInterval:bestTime.duration];
+		if ([bestTime.comment isEqualToString:@""]) {
+			self.bestTimeLabel.text = [self formatTimeInterval:bestTime.duration];
+		} else {
+			self.bestTimeLabel.text = [NSString stringWithFormat:@"%@ - %@",
+									   bestTime.comment,
+									   [self formatTimeInterval:bestTime.duration]];
+		}
+
 		self.bestTimeProgressView.progress = bestTime.duration / maxTime;
 
-		self.worstTimeLabel.text = [self formatTimeInterval:worstTime.duration];
+		if ([worstTime.comment isEqualToString:@""]) {
+			self.worstTimeLabel.text = [self formatTimeInterval:worstTime.duration];
+		} else {
+			self.worstTimeLabel.text = [NSString stringWithFormat:@"%@ - %@",
+									   worstTime.comment,
+									   [self formatTimeInterval:worstTime.duration]];
+		}
+
 		self.worstTimeProgressView.progress = worstTime.duration / maxTime;
 
 		self.averageTimeLabel.text = [self formatTimeInterval:averageDuration];
