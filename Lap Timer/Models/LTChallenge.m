@@ -9,6 +9,12 @@
 #import "LTChallenge.h"
 #import "LTTime.h"
 
+@interface LTChallenge ()
+
+@property (nonatomic, strong) NSMutableArray *times;
+
+@end
+
 @implementation LTChallenge
 
 - (instancetype)initWithName:(NSString *)name

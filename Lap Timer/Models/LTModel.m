@@ -8,6 +8,12 @@
 
 #import "LTModel.h"
 
+@interface LTModel ()
+
+@property (nonatomic, strong) NSMutableArray *challenges;
+
+@end
+
 @implementation LTModel
 
 - (id)init

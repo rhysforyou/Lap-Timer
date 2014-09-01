@@ -10,8 +10,13 @@
 
 @class LTChallenge;
 
+/**
+ *  Displays a challenge's best, worst, and average times as well as allowing 
+ *  the user to add new times.
+ */
 @interface LTTimerViewController : UIViewController
 
+/** The challenge to manage times for */
 @property (nonatomic, strong) LTChallenge *challenge;
 
 @end

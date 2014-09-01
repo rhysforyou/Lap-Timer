@@ -10,8 +10,10 @@
 
 @class LTChallenge;
 
+/** Shows a list of all attempts on a given challenge. */
 @interface LTTimesViewController : UITableViewController
 
+/** The challenge to list attempts for */
 @property (nonatomic, strong) LTChallenge *challenge;
 
 @end

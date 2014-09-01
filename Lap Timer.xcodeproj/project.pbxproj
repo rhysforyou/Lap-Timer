@@ -14,7 +14,6 @@
 		575CA9421991D9DE0021A504 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9411991D9DE0021A504 /* main.m */; };
 		575CA9461991D9DE0021A504 /* LTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA9451991D9DE0021A504 /* LTAppDelegate.m */; };
 		575CA9491991D9DE0021A504 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575CA9471991D9DE0021A504 /* Main.storyboard */; };
-		575CA94C1991D9DE0021A504 /* LTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575CA94B1991D9DE0021A504 /* LTViewController.m */; };
 		575CA94E1991D9DE0021A504 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575CA94D1991D9DE0021A504 /* Images.xcassets */; };
 		575CA9551991D9DE0021A504 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575CA9541991D9DE0021A504 /* XCTest.framework */; };
 		575CA9561991D9DE0021A504 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575CA9351991D9DE0021A504 /* Foundation.framework */; };
@@ -52,8 +51,6 @@
 		575CA9441991D9DE0021A504 /* LTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTAppDelegate.h; sourceTree = "<group>"; };
 		575CA9451991D9DE0021A504 /* LTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTAppDelegate.m; sourceTree = "<group>"; };
 		575CA9481991D9DE0021A504 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		575CA94A1991D9DE0021A504 /* LTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTViewController.h; sourceTree = "<group>"; };
-		575CA94B1991D9DE0021A504 /* LTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTViewController.m; sourceTree = "<group>"; };
 		575CA94D1991D9DE0021A504 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		575CA9531991D9DE0021A504 /* Lap TimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lap TimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		575CA9541991D9DE0021A504 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -139,8 +136,6 @@
 				575CA9441991D9DE0021A504 /* LTAppDelegate.h */,
 				575CA9451991D9DE0021A504 /* LTAppDelegate.m */,
 				575CA9471991D9DE0021A504 /* Main.storyboard */,
-				575CA94A1991D9DE0021A504 /* LTViewController.h */,
-				575CA94B1991D9DE0021A504 /* LTViewController.m */,
 				575CA94D1991D9DE0021A504 /* Images.xcassets */,
 				575CA93C1991D9DE0021A504 /* Supporting Files */,
 			);
@@ -318,7 +313,6 @@
 				575CA9731991DAB80021A504 /* LTModel.m in Sources */,
 				575CA9421991D9DE0021A504 /* main.m in Sources */,
 				575CA9791991DACB0021A504 /* LTTime.m in Sources */,
-				575CA94C1991D9DE0021A504 /* LTViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
